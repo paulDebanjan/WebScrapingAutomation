@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Data Capture{% endblock title%}
+{% load static %}
+{% block stylesheet %} 
+<link rel="stylesheet" href="{% static 'style/dataCatpureHome.css' %}">
+{% endblock stylesheet %}
+{% block content %}
+      <div class="capter-main-div">
+        <h1 class="dataCapter-header">DataCapture</h1> 
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="text" name="url_text" placeholder="Enter your URL">
+            <input class="btn btn-success btn-sm" type="submit" value="Scan Site">
+        </form>
+      </div>
+{% endblock content%}
